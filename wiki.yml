@@ -4,4 +4,20 @@
   vars:
 
   tasks:
-    - name: 
+    
+    - name: Installation des paquets requis
+      apt:
+        name:
+          - httpd
+          - mariadb-server
+    
+    - name: Demarrage de httpd
+      service: 
+        name: httpd
+        state: started
+    
+    - name: Demarrage de mariadb-server
+      service: 
+        name: mariadb-server
+        state: started
+    
